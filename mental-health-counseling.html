@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assessment</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+#next {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#next:hover {
+    background-color: #3e8e41;
+}
+
+#result {
+    font-size: 18px;
+    color: #666;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Assessment</h1>
+        <div class="question-container"></div>
+        <button id="next" onclick="nextQuestion()">Next</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let questions = [
+    {
+        question: "How often do you feel sad or empty?",
+        options: ["Rarely", "Sometimes", "Often", "Almost always"],
+        answer: 0
+    },
+    {
+        question: "Do you have trouble sleeping or concentrating?",
+        options: ["Never", "Occasionally", "Frequently", "Almost always"],
+        answer: 0
+    },
+    {
+        question: "Have you experienced any traumatic events?",
+        options: ["Yes, recently", "Yes, in the past", "No", "Not sure"],
+        answer: 0
+    },
+    {
+        question: "Do you have thoughts of harming yourself or others?",
+        options: ["Never", "Rarely", "Sometimes", "Often"],
+        answer: 0
+    },
+    {
+        question: "How often do you feel anxious or worried?",
+        options: ["Rarely", "Sometimes", "Often", "Almost always"],
+        answer: 0
+    }
+    ];
+
+let currentQuestion = 0;
+let result = "";
+
+function loadQuestion() {
+    let questionHtml = `
+        <p id="question">${questions[currentQuestion].question}</p>
+        <div class="options">
+            <input type="radio" id="option1" name="option" />
+            <label for="option1">${questions[currentQuestion].options[0]}</label>
+            <br />
+            <input type="radio" id="option2" name="option" />
+            <label for="option2">${questions[currentQuestion].options[1]}</label>
+            <br />
+            <input type="radio" id="option3" name="option" />
+            <label for="option3">${questions[currentQuestion].options[2]}</label>
+            <br />
+            <input type="radio" id="option4" name="option" />
+            <label for="option4">${questions[currentQuestion].options[3]}</label>
+        </div>
+    `;
+    document.querySelector(".question-container").innerHTML = questionHtml;
+}
+function nextQuestion() {
+    let selectedOption = document.querySelector("input[name='option']:checked");
+    if (selectedOption) {
+        questions[currentQuestion].answer = parseInt(selectedOption.id.replace("option", ""));
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+            document.querySelectorAll("input[name='option']").forEach((input) => input.checked = false);
+        } else {
+            calculateResult();
+        }
+    } else {
+        alert("Please select an option.");
+    }
+}
+
+function calculateResult() {
+    let sadCount = 0;
+    questions.forEach((question) => {
+        if (question.answer >= 2) {
+            sadCount++;
+        }
+    });
+
+    if (sadCount >= 3) {
+        result = "You may be experiencing depression. Consider seeking professional help.";
+    } else if (sadCount >= 1) {
+        result = "You may be experiencing some symptoms of anxiety or depression. Consult a mental health professional.";
+    } else {
+        result = "You don't appear to be experiencing significant symptoms.";
+    }
+
+    document.querySelector(".question-container").style.display = "none";
+    document.getElementById("result").innerText = result;
+}
+
+loadQuestion();
+
+
+    </script>
+</body>
+</html>

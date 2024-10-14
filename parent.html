@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Emotional Cup</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('help.jpg') no-repeat center center fixed; 
+      background-size: cover;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #4CAF50;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .logo img {
+      height: 50px; /* Adjust logo size */
+      margin-right: 15px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #3e8e41;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    header {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+      color: white;
+    }
+    .hero1 {
+  background-color: transparent;
+  padding: 20px;
+}
+
+    .hero1 h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .hero1 p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .resources, .instructions {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #6ab7d6;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      section p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="download2.png" alt="The Emotional Cup Logo"></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book.html">Book a Session</a></li>
+      <li><a href="parent.html">Parent Resources</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class="hero1">
+    <h1>Parent Resources</h1>
+    </section>
+  </header>
+
+  <section id="parent-resources">
+    <h2>Understanding Your Child's Needs</h2>
+    <p>As a parent, supporting your child's mental health is crucial. Here are resources that can help you understand their challenges better:</p>
+    <div class="resources">
+      <h3>Articles and Guides</h3>
+      <ul>
+        <li><a href="https://www.healthdirect.gov.au/anxiety-in-teenagers">Understanding Teen Anxiety: Signs and Solutions</a></li>
+        <li><a href="https://childmind.org/article/tips-communicating-with-teen/">Building Healthy Communication with Your Teen</a></li>
+        <li><a href="https://kidshealth.org/en/parents/stress.html">Supporting Your Child Through Academic Stress</a></li>
+        <li><a href="https://organizations.headspace.com/blog/helping-your-teen-navigate-change">Navigating Life Changes: How to Help Your Teen Adjust</a></li>
+      </ul>
+
+      <h3>Videos</h3>
+      <p>Watch our video series on various topics related to teenage mental health and well-being:</p>
+      <ul>
+        <li><a href="https://youtu.be/3Nf2Pzcketg">Coping with Stress: Tips for Teens and Parents</a></li>
+        <li><a href="https://youtu.be/bVIV8G1RbG8?si=BwiG4-3LIoKmywwR">Encouraging Open Conversations with Your Teen</a></li>
+        <li><a href="https://youtu.be/PR7FRMUAI30?si=EG9BBZqPCVbiuOBI">Understanding Self-Esteem and Identity in Adolescence</a></li>
+      </ul>
+
+      <h3>Workshops and Webinars</h3>
+      <p>Join our workshops to learn more about supporting your teen's mental health. Check our events page for upcoming sessions.</p>
+    </div>
+    <div class="instructions">
+      <h3>Instructions for Parents</h3>
+      <p>To access more resources and support:</p>
+      <ol>
+        <li>Explore the articles and guides listed above for valuable insights.</li>
+        <li>Watch the videos to understand common challenges faced by teens.</li>
+        <li>Consider attending our workshops to gain practical skills for supporting your child.</li>
+        <li>If you have questions or need further assistance, feel free to reach out through the 'Contact Us' page.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 The Emotional Cup. Made by Abhishek Singh. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

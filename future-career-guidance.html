@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Career Guidance</title>
+    <script>
+    
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+#next {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Future Career Guidance</h1>
+        <div class="question-container"></div>
+        <button id="next" onclick="nextQuestion()">Next</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let questions = [
+    {
+        question: "What motivates you most in a career?",
+        options: ["Personal fulfillment", "Financial stability", "Work-life balance", "Opportunities for growth"],
+        answer: 0
+    },
+    {
+        question: "How important is job security to you?",
+        options: ["Very important", "Somewhat important", "Not very important", "Not at all important"],
+        answer: 0
+    },
+    {
+        question: "Do you prefer working independently or as part of a team?",
+        options: ["Independently", "As part of a team", "Either is fine", "Undecided"],
+        answer: 0
+    },
+    {
+        question: "What type of work environment do you prefer?",
+        options: ["Office", "Remote", "Outdoor", "Creative space"],
+        answer: 0
+    },
+    {
+        question: "How often do you want to learn new skills?",
+        options: ["Regularly", "Occasionally", "Rarely", "Never"],
+        answer: 0
+    }
+];
+let currentQuestion = 0;
+let result = "";
+
+function loadQuestion() {
+    let questionHtml = `
+        <p id="question">${questions[currentQuestion].question}</p>
+        <div class="options">
+            <input type="radio" id="option1" name="option" />
+            <label for="option1">${questions[currentQuestion].options[0]}</label>
+            <br />
+            <input type="radio" id="option2" name="option" />
+            <label for="option2">${questions[currentQuestion].options[1]}</label>
+            <br />
+            <input type="radio" id="option3" name="option" />
+            <label for="option3">${questions[currentQuestion].options[2]}</label>
+            <br />
+            <input type="radio" id="option4" name="option" />
+            <label for="option4">${questions[currentQuestion].options[3]}</label>
+        </div>
+    `;
+    document.querySelector(".question-container").innerHTML = questionHtml;
+}
+
+function nextQuestion() {
+    let selectedOption = document.querySelector("input[name='option']:checked");
+    if (selectedOption) {
+        questions[currentQuestion].answer = parseInt(selectedOption.id.replace("option", ""));
+        currentQuestion++;
+
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+            document.querySelectorAll("input[name='option']").forEach((input) => input.checked = false);
+        } else {
+            calculateResult();
+        }
+    } else {
+        alert("Please select an option.");
+    }
+}
+
+function calculateResult() {
+    let careerScore = 0;
+    questions.forEach((question) => {
+        if (question.answer >= 2) {
+            careerScore++;
+        }
+    });
+
+    if (careerScore >= 3) {
+        result = "You're likely suited for a creative or entrepreneurial career.";
+    } else if (careerScore >= 1) {
+        result = "You may thrive in a dynamic, fast-paced industry.";
+    } else {
+        result = "You might prefer a stable, traditional career path.";
+    }
+    document.querySelector(".question-container").style.display = "none";
+    document.getElementById("result").innerText = result;
+}
+
+loadQuestion();
+
+let questions = [
+    // ... (questions remain the same)
+];
+
+let currentQuestion = 0;
+let result = "";
+
+function loadQuestion() {
+    // ... (loadQuestion function remains the same)
+}
+
+function nextQuestion() {
+    // ... (nextQuestion function remains the same)
+}
+
+function calculateResult() {
+    let careerScore = 0;
+    questions.forEach((question) => {
+        if (question.answer >= 2) {
+            careerScore++;
+        }
+    });
+
+    if (careerScore >= 3) {
+        result = "You're likely suited for a creative or entrepreneurial career.";
+    } else if (careerScore >= 1) {
+        result = "You may thrive in a dynamic, fast-paced industry.";
+    } else {
+        result = "You might prefer a stable, traditional career path.";
+    }
+
+
+
+    // Recommend therapists based on career score
+    let therapistRecommendations = "";
+    if (careerScore >= 3) {
+        therapistRecommendations = "Consider consulting a career coach or creative therapist, such as:";
+    } else if (careerScore >= 1) {
+        therapistRecommendations = "You may benefit from working with a therapist specializing in career development, such as:";
+    } else {
+        therapistRecommendations = "A therapist with expertise in stress management and work-life balance may be helpful, such as:";
+    }
+
+    // List of recommended therapists (replace with actual therapists)
+    const therapists = [
+        { name: "Jane Smith, LMFT", specialty: "Career Coaching" },
+        { name: "John Doe, LPC", specialty: "Creative Therapy" },
+        { name: "Emily Johnson, PhD", specialty: "Career Development" },
+    ];
+
+    therapistRecommendations += "<ul>";
+    therapists.forEach((therapist) => {
+        therapistRecommendations += `<li>${therapist.name}, ${therapist.specialty}</li>`;
+    });
+    therapistRecommendations += "</ul>";
+
+    document.querySelector(".question-container").style.display = "none";
+    document.getElementById("result").innerHTML = `${result}<br><br>${therapistRecommendations}`;
+}
+loadQuestion();
+
+    </script>
+</body>
+</html>

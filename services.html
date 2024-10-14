@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Emotional Cup</title>
+  <link rel="stylesheet" href="css/services.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('help.jpg') no-repeat center center fixed; 
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      margin-top: 60px;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #4CAF50;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: background-color 0.3s;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #3e8e41;
+    }
+    header {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    
+   
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    #services {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.service:hover {
+    background-color:  #3e8e41;
+}
+
+.service a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.service p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+.service a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.service p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+    .help-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e7f4e4;
+      border-left: 5px solid #4CAF50;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #3e8e41;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+    }
+    .instructions {
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service h3 {
+        font-size: 1.2em;
+      }
+      .service p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav role="navigation">
+    <div class="logo">
+      <a href="index.html"><img src="download2.png" alt="The Emotional Cup Logo"></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book.html">Book a Session</a></li>
+      <li><a href="parent.html">Parent Resources</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <section class="hero1">
+    <h1>Our Counseling Services</h1>
+    <p>Explore the range of services we offer to support students and their families.</p>
+    </section>
+  </header>
+
+  <section id="services">
+    <h2>Types of Counseling Offered</h2>
+    <div class="service">
+        <a href="academic-stress-counseling.html">
+            <h3>Academic Stress Counseling</h3>
+            <p>Help students manage academic pressures, improve time management, and reduce stress related to studies.</p>
+        </a>
+    </div>
+    <div class="service">
+        <a href="mental-health-counseling.html">
+            <h3>Mental Health Counseling</h3>
+            <p>Offer support for anxiety, depression, or other emotional challenges faced by students.</p>
+        </a>
+    </div>
+    <div class="service">
+        <a href="future-career-guidance.html">
+            <h3>Future Career Guidance</h3>
+            <p>Guide students in choosing the right career path based on their skills, interests, and academic background.</p>
+        </a>
+    </div>
+</section>
+
+
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <p>Students can book counseling sessions anonymously. Parents are kept informed while respecting privacy. Our system matches students with the right therapist based on their needs.</p>
+      <p>When a student chooses to seek counseling, they will fill out a simple questionnaire. This helps us understand their specific challenges and preferences, allowing us to pair them with a therapist who specializes in their area of concern.</p>
+      <p>Students can schedule their sessions at their convenience. We offer both virtual and in-person appointments, ensuring support is easily accessible.</p>
+      <p>We prioritize confidentiality and provide a secure environment for students to express their thoughts and feelings freely.</p>
+
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <p>To explore our services, navigate through the options listed above. If you need assistance, check the 'Contact Us' page for support.</p>
+      </div>
+
+      <div class="help-box">
+        <h3>Need Help?</h3>
+        <p>If you have any questions or need assistance with the counseling process, please reach out to our support team. We are here to help you every step of the way.</p>
+        <button class="btn" onclick="startQuestionnaire()">Get Started</button>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 The Emotional Cup. Made by Abhishek Singh. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

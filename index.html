@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Emotional Cup</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('help.jpg') no-repeat center center fixed; 
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: rgba(76, 175, 80, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s, transform 0.3s;
+      padding: 10px;
+    }
+    nav ul li a:hover {
+      background-color: #3e8e41;
+      border-radius: 5px;
+      transform: scale(1.05);
+    }
+    
+    section {
+      max-width: 5000px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .hero {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+   .hero {
+     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+     background-size: 100% 300px;
+     background-position: 0% 100%;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #333;
+   }
+   
+   .hero h1 {
+     font-size: 64px;
+     margin-bottom: 20px;
+   }
+   
+   .hero p {
+     font-size: 24px;
+     margin-bottom: 40px;
+   }
+   
+   .hero button {
+     padding: 20px 40px;
+     font-size: 24px;
+     border-radius: 10px;
+     cursor: pointer;
+   } 
+   .cta {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 20px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.cta a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: #3e8e41;
+}
+    
+    .help-box, .instructions, .booking-info {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #3498db;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: rgba(106, 183, 214, 0.9);
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header {
+        padding: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      button {
+        font-size: 1em;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="download2.png" alt="The Emotional Cup Logo"></a>
+    </div>
+    <ul>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book.html">Book a Session</a></li>
+      <li><a href="parent.html">Parent Resources</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <header>
+    <section class="hero">
+    <h1>Welcome to The Emotional Cup</h1>
+    <p>A safe space for students to share their problems and get professional advice anonymously.</p>
+    <button class="cta"><a href="book.html">Book a Session </a></button>
+    </section>
+  </header>
+
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <p>Students can book counseling sessions anonymously. Parents are kept informed while respecting privacy. Our system matches students with the right therapist based on their needs.</p>
+    <p>When a student chooses to seek counseling, they will fill out a simple questionnaire. This helps us understand their specific challenges and preferences, allowing us to pair them with a therapist who specializes in their area of concern.</p>
+    <p>Students can schedule their sessions at their convenience. We offer both virtual and in-person appointments, ensuring support is easily accessible.</p>
+    <p>We prioritize confidentiality and provide a secure environment for students to express their thoughts and feelings freely.</p>
+
+    <div class="instructions">
+      <h3>Instructions</h3>
+      <p>To get started, navigate to the 'Book a Session' page where you can choose your preferred day, date, and time. If you have questions, feel free to reach out through our 'Contact Us' page.</p>
+    </div>
+
+    <div class="booking-info">
+      <h3>Book a Session</h3>
+      <p>To book your session, please follow these steps:</p>
+      <ol>
+        <li>Select your preferred day from the dropdown menu.</li>
+        <li>Choose a date using the date picker.</li>
+        <li>Pick a time for your session.</li>
+        <li>Click 'Confirm Booking' to finalize your session.</li>
+      </ol>
+    </div>
+
+    <div class="help-box">
+      <h3>Need Help?</h3>
+      <p>If you have any questions or need assistance with the counseling process, please reach out to our support team. We are here to help you every step of the way.</p>
+      <button class="btn" onclick="startQuestionnaire()">Get Started</button>
+    </div>
+
+    <div id="questionnaire" class="hidden">
+      <h1>Help us match you to the right therapist</h1>
+      <div class="question-box">
+        <p>Would you like to invite your child?</p>
+        <button onclick="nextQuestion('Yes')">Yes, I want therapy for my child</button>
+        <button onclick="nextQuestion('No')">No, I only need parental advice</button>
+        <button onclick="nextQuestion('Not Sure')">Not sure yet</button>
+      </div>
+    </div>
+    <div id="progress-bar">
+      <div id="progress"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 The Emotional Cup. Made by Abhishek Singh. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
